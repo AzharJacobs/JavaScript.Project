@@ -75,3 +75,58 @@ img {
         }
     }
 }
+
+/* HomePage */
+.container-fluid1 {
+    min-height: 89.8vh;
+    display: grid;
+    place-items: center;
+    background-image: url(/images/background1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(#0003, #000);
+}
+
+/* About Us */
+.aboutMain {
+    min-height: 89.8vh;
+    display: grid;
+    place-items: center;
+    background-image: url(/images/background1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(#0003, #000);
+  }
+  .aboutHeader {
+    margin-top: 70px;
+    text-align: center;
+    font-family: Hacked;
+    color: #e5a1fc;
+    font-size: 3em;
+    border: 2px solid #000600;
+    background: linear-gradient(60deg, #3a055b, #000600);
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .aboutContainer {
+    background: linear-gradient(60deg, #150022, #000600);
+    color: #e5a1fc;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 2px solid #e5a1fc; */
+  }
+  @media (max-width: 400) {
+    .aboutHeader {
+      margin-top: 20px;
+      text-align: center;
+      font-family: Hacked;
+      color: #e5a1fc;
+      font-size: 1em;
+      border: 2px solid #000600;
+      background: linear-gradient(60deg, #150022, #000600);
+      padding: 5px;
+    }
+  }
