@@ -189,3 +189,15 @@ img {
 .container-fluid{
     background-color: transparent;
 }
+
+/* Admin */
+
+.container-fluid4{
+    min-height: 89.8vh;
+    display: grid;
+    place-items: center;
+    background-image: url(/images/background1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(#0003, #000);
+}
