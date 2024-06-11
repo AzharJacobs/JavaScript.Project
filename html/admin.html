@@ -14,7 +14,7 @@
     <title>Admin</title>
 </head>
 
-<body>
+<body style="background: linear-gradient(60deg, #150022, #000600);">
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
@@ -52,13 +52,37 @@
             </div>
         </div>
     </nav>
-    <main class="container-fluid">
+    <main class="container-fluid4">
         <div class="row">
             <h2 class="display-2">
                 Admin
             </h2>
         </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" placeholder="Search" required class="form-control" data-search-product>
+                <button class="btn btn-secondary m-1" sorting>Sort by Price</button>
+                <a class="btn btn-secondary m-1" href="../html/checkout.html">Checkout</a>
+            </div>
+        </div>
+        <div class="row container-fluid">
+            <div class="col background-transparent">
+              <table class="table table-bordered table-responsive">
+                <thead class="table-group-divider">
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider" table-checkout></tbody>
+                <tfoot class="table-group-divider"></tfoot>
+              </table>
+            </div>
+          </div>
     </main>
+    
     <footer class="container-fluid">
         <div class="row">
             <p class="lead">Copyright &copy;
