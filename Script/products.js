@@ -1,5 +1,5 @@
 // Create products and store it on the local storage
-let wrapper = document.querySelector('[recentProducts]')
+let wrapper = document.querySelector('[data-products]');
 let products =
     JSON.parse(localStorage.getItem('products'))
         ? JSON.parse(localStorage.getItem('products'))
@@ -7,6 +7,7 @@ let products =
             JSON.stringify(
                 [
                     {
+                        id: 1,
                         productName: "Attack ON Titan",
                         category: "Manga",
                         description: "Join the intense and thrilling battle for humanity's survival against monstrous Titans in this gripping manga series.",
@@ -14,6 +15,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/AOT.jpg"
                       },
                       {
+                        id: 2,
                         productName: "Black Clover",
                         category: "Manwaha",
                         description: "Dive into a world where magic and adventure collide, following the journey of a boy determined to become the Wizard King.",
@@ -21,6 +23,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/BlackClover.png"
                       },
                       {
+                        id: 3,
                         productName: "Death Note",
                         category: "Manga",
                         description: "Discover the dark and gripping story of a high school student who wields a notebook with the power to kill anyone whose name he writes in it.",
@@ -28,6 +31,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/Death.png"
                       },
                       {
+                        id: 4,
                         productName: "Demon Slayer",
                         category: "Manwaha",
                         description: "Embark on a heart-pounding quest to save humanity from demons, led by a young boy determined to avenge his family.",
@@ -35,6 +39,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/DemonSlayer.jpg"
                       },
                       {
+                        id: 5,
                         productName: "Fairy Tale",
                         category: "Manga",
                         description: "Experience the magical and adventurous world of a guild of wizards as they take on exciting and dangerous quests.",
@@ -42,6 +47,7 @@ let products =
                         img_ur: "https://azharjacobs.github.io/Images/Images/Fairy.jpg"
                       },
                       {
+                        id: 6,
                         productName: "SpyXFamily",
                         category: "Manwaha",
                         description: "Uncover the humorous and heartwarming story of a spy who creates a fake family for his mission, only to discover that they are anything but ordinary.",
@@ -49,6 +55,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/family.jpg"
                       },
                       {
+                        id: 7,
                         productName: "My Hero Academia",
                         category: "Manga",
                         description: "Follow the journey of young heroes in training as they strive to become the greatest superheroes in a world where nearly everyone has superpowers.",
@@ -56,6 +63,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/Hero.png"
                       },
                       {
+                        id: 8,
                         productName: "Hunter x Hunter",
                         category: "Manwaha",
                         description: "Join the thrilling adventures of a young boy searching for his father and uncovering his true potential as a Hunter.",
@@ -63,6 +71,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/HxH.png"
                       },
                       {
+                        id: 9,
                         productName: "Naruto",
                         category: "Manga",
                         description: "Follow the epic journey of a young ninja with dreams of becoming the strongest ninja and earning the respect of his village.",
@@ -70,6 +79,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/Naruto.jpg"
                       },
                       {
+                        id: 10,
                         productName: "Solo Leveling",
                         category: "Manwaha",
                         description: "Witness the rise of an ordinary hunter who transforms into the ultimate hunter through relentless leveling and battles.",
@@ -77,6 +87,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/SoloLvl.jpg"
                       },
                       {
+                        id: 11,
                         productName: "Toradora",
                         category: "Manga",
                         description: "Delve into the charming and unexpected story of love and friendship between two high school students with seemingly opposite personalities.",
@@ -84,6 +95,7 @@ let products =
                         img_url: "https://azharjacobs.github.io/Images/Images/Tora.jpg"
                       },
                       {
+                        id: 12,
                         productName: "Jujutsu Kaisen",
                         category: "Manwaha",
                         description: "Enter a world where a young sorcerer battles against cursed spirits to protect humanity from supernatural threats.",
@@ -94,77 +106,76 @@ let products =
                 ]
             )
         );
+
 // Current year
 document.querySelector('[currentYear]').textContent =
     new Date().getUTCFullYear();
 
-function recentProducts() {
-    try {
-        products.forEach(product => {
-            wrapper.innerHTML += `
-                <div class="card">
-                    <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
-                    <div class="card-body">
-                        <h5 class="card-title">${product.productName}</h5>
-                        <p class="card-text">${product.description}</p>
-                        <p class="card-text">${product.amount}</p>
-                        <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
-                    </div>
+// Function to display products
+function displayProducts(products) {
+    // Clear the wrapper before appending new products
+    wrapper.innerHTML = '';
+
+    // Iterate through each product and append to the wrapper
+    products.forEach(product => {
+        wrapper.innerHTML += `
+            <div class="card">
+                <img src="${product.img_url}" class="card-img-top" alt="${product.id}" loading='lazy'>
+                <div class="card-body">
+                    <h5 class="card-title">${product.productName}</h5>
+                    <p class="card-text">${product.description}</p>
+                    <p class="card-text">${product.amount}</p>
+                    <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
                 </div>
-            `;
-        });
-    } catch (e) {
-        wrapper.textContent = "Please contact our administrator";
-        setTimeout(() => {
-            location.reload();
-        }, 2000);
-    }
+            </div>
+        `;
+    });
 }
 
-recentProducts();
+// Initial display of products
+displayProducts(products);
 
-// keyup
-searchProduct.addEventListener('keyup', () => {
+// Search product
+let productSearch = document.querySelector('[data-search-product]');
+productSearch.addEventListener('input', () => {
     try {
-        if (searchProduct.value.length < 1) {
-            displayProducts(products)
-        }
-        let filteredProduct = products.filter(product => product.productName.toLowerCase().includes(searchProduct.value))
-        displayProducts(filteredProduct)
-        if (!filteredProduct.length) throw new Error(`${searchProduct.value} product was not found`)
+        let searchItem = products.filter(item => {
+            return item.productName.toLowerCase().includes(productSearch.value.toLowerCase());
+        });
+        displayProducts(searchItem);
     } catch (e) {
-        container.textContent = e.message || 'Please try again later'
+        alert('Function is under maintenance');
     }
-})
+});
+
 // Sorting by ascending and descending
-let isToggle = false
-sortingByAmount.addEventListener('click', () => {
+let productSort = document.querySelector('[sorting]');
+let highest = false;
+productSort.addEventListener('click', () => {
     try {
-        if (!products) throw new Error('Please try again later')
-        if (!isToggle) {
-            products.sort((a, b) => b.amount - a.amount)
-            sortingByAmount.textContent = 'Sorted by highest amount'
-            isToggle = true
+        if (!highest) {
+            products.sort((a, b) => b.amount - a.amount);
+            highest = true;
         } else {
-            products.sort((a, b) => a.amount - b.amount)
-            sortingByAmount.textContent = 'Sorted by lowest amount'
-            isToggle = false
+            products.sort((a, b) => a.amount - b.amount);
+            highest = false;
         }
-        displayProducts(products)
+        displayProducts(products);
     } catch (e) {
-        container.textContent = e.message || 'We are working on this issue'
+        alert('This Function is under maintenance');
     }
-})
+});
+
 // Add to cart
+let cart = JSON.parse(localStorage.getItem('checkout')) || [];
 function addToCart(product) {
     try {
-        checkoutItems.push(product)
-        localStorage.setItem('checkout', JSON.stringify(checkoutItems))
-        document.querySelector('[counter]').textContent = checkoutItems.length || 0
+        cart.push(product);
+        localStorage.setItem('checkout', JSON.stringify(cart));
     } catch (e) {
-        alert("Unable to add to cart")
+        alert('The Checkout is under maintenance');
     }
 }
 window.onload = () => {
-    document.querySelector('[counter]').textContent = checkoutItems.length || 0
-}
+    document.querySelector('[counter]').textContent = cart.length || 0;
+};
