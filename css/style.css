@@ -35,7 +35,7 @@ img {
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
-    background-image: url(/images/BackGround.jpg);
+    /* background-image: url(/images/BackGround.jpg); */
 }
 
 /* text-align: center */
@@ -56,12 +56,13 @@ img {
     & img {
         object-fit: contain;
         padding-block: .2rem;
+        
     }
 
     & .card-body {
         display: grid;
         grid-template-rows: subgrid;
-        grid-row: span 4;
+        grid-row: span 6;
     }
 }
 
