@@ -164,3 +164,28 @@ img {
     padding: 10px;
     margin-bottom: 10px;
 }
+
+/* checkout */
+.container-fluid3{
+    min-height: 89.8vh;
+    display: grid;
+    place-items: center;
+    background-image: url(/images/background1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(#0003, #000);
+}
+.checkout-header {
+    margin-top: 70px;
+    text-align: center;
+    font-family: Hacked;
+    color: #e5a1fc;
+    font-size: 3em;
+    border: 2px solid #000600;
+    background: linear-gradient(60deg, #3a055b, #000600);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.container-fluid{
+    background-color: transparent;
+}

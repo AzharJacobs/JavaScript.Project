@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Checkout</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
@@ -53,18 +51,32 @@
             </div>
         </div>
     </nav>
-    <main class="container-fluid">
-        <div class="row">
-            <h2 class="display-2">
-                Checkout
-            </h2>
-        </div>
-    </main>
+    <main class="container-fluid3" id="checkout" data-checkout>
+        <header class="checkout-header">
+          <h1>My Checkout</h1>
+        </header>
+        <div class="row container-fluid">
+            <div class="col background-transparent">
+              <table class="table table-bordered table-responsive">
+                <thead class="table-group-divider">
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider" table-checkout></tbody>
+                <tfoot class="table-group-divider"></tfoot>
+              </table>
+            </div>
+          </div>
+          <a class="btn btn-secondary" id="clear" onclick='clearProducts()'>Clear Items</a>
+          <a class="btn btn-secondary" id="pay" onclick='productPayment()'>Pay Now</a>
+        </main>
     <footer class="container-fluid">
         <div class="row">
-            <p class="lead">Copyright &copy;
-                <span currentYear></span>
-            </p>
+            <p class="lead">Copyright &copy; <span id="current-year"></span></p>
         </div>
     </footer>
 
@@ -73,7 +85,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- Custom's script -->
-    <script src="../script/checkout.js"></script>
+    <script src="../Script/checkout.js"></script>
 </body>
-
 </html>
