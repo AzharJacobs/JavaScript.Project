@@ -53,8 +53,11 @@
         </div>
     </nav>
     <main class="container-fluid4" id="admin">
-        <div class="row">
-        </div>
+      <div class="row">
+        <h2 class="HomeHeader">
+            Admin
+        </h2>
+    </div>
         <div class="row">
           <div class="col">
             <button class="btn btn-secondary m-3" id="adminSortProduct">Sort Items</button>
@@ -74,10 +77,11 @@
                 <div class="modal-body">
                   <form class="form">
                     <div class="container">
-                      <input class="form-control m-2" type="text" placeholder="Enter the food items name" name="addName" id="addName" required>
+                      <input class="form-control m-2" type="text" placeholder="Enter the food item's name" name="addName" id="addName" required>
                       <textarea class="form-control m-2" placeholder="Enter the food item's details" name="addDetail" id="addDetail" required></textarea>
                       <input class="form-control m-2" type="number" placeholder="Enter the food item's amount" name="addAmount" id="addAmount" required >
-                      <input class="form-control m-2" type="url" placeholder="Enter the food item's image url" name="addImage" id="addImage" required >
+                      <input class="form-control m-2" type="url" placeholder="Enter the food item's image URL" name="addImage" id="addImage" required >
+                      <input class="form-control m-2" type="text" placeholder="Enter the food item's category" name="addCategory" id="addCategory" required >
                     </div>
                   </form>
                 </div>
@@ -96,6 +100,7 @@
                 <th>Product</th>
                 <th>Category</th>
                 <th>Image</th>
+                <th>Description</th>
                 <th>Amount</th>
                 <th>Action</th>
               </tr>
@@ -107,13 +112,30 @@
         </div>
       </main>
     
-    <footer class="container-fluid">
+      <footer class="container-fluid">
         <div class="row">
-            <p class="lead">Copyright &copy;
+            <div class="col-md-4 text-center">
+                <h3>Contact</h3>
+                <p>Email: asheekasamuels@icloud.com</p>
+                <p>Phone: 067 623 5929</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>Address</h3>
+                <p>314 Imam Haron, Rd Landsowne</p>
+                <p>Cape Town, Western Cape, 7780</p>
+                <p>South Africa</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>Social Media</h3>
+            </div>
+        </div>
+        <div class="row">
+            <p class="lead text-center">Copyright &copy;
                 <span currentYear></span>
             </p>
         </div>
     </footer>
+    
 
     <!-- Bootstrap's script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -124,3 +146,4 @@
 </body>
 
 </html>
+
