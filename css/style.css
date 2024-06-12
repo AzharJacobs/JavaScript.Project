@@ -35,8 +35,9 @@ img {
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
-    /* background-image: url(/images/BackGround.jpg); */
 }
+    /* background-image: url(/images/BackGround.jpg); */
+
 
 /* text-align: center */
 :is(h2, footer p) {
@@ -200,4 +201,26 @@ img {
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(#0003, #000);
+}
+.card{
+    background: transparent;
+    border: 2px solid #3a055b;
+    color: white;
+}
+.card-img-top:hover {
+    transition: border 1s; /* Apply transition only to the border */
+    zoom: 4;
+}
+.table{
+    background: transparent;
+}
+
+/* Footer */
+footer {
+    background-color: #FFE4CF;
+    padding: 20px 0;
+    text-align: center;
+    justify-content: center;
+    color: black !important;
+    width: 100%;
 }
