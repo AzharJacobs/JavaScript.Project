@@ -14,11 +14,12 @@ function adminContent(args) {
                 <td>${product.productName}</td>
                 <td>${product.category}</td>
                 <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail h-25 w-25"></td>
+                <td>${product.description}</td>
                 <td>R${product.amount}</td>
                 <td>
                     <div class="d-flex justify-content-around">
                         <button class="btn btn-secondary me-2" data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}">Update</button>
-                        <button class="btn btn-secondary ms-2" onclick="deleteProduct(${i})">Delete</button>
+                        <button class="btn btn-secondary ms-2 <i class="bi bi-x"></i>" onclick="deleteProduct(${i})">Delete</button>
                         <div class="modal fade" id="updateProduct${product.id}" tabindex="-1" aria-labelledby="updateProduct${product.id}" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -31,7 +32,8 @@ function adminContent(args) {
                                             <div class="container">
                                                 <input class="form-control m-2" type="text" placeholder="Enter a Product Name" value="${product.productName}" name="admin-name" id="admin-name${product.id}" required>
                                                 <input class="form-control m-2" type="text" placeholder="Enter Image URL" value="${product.img_url}" name="admin-image" id="admin-image${product.id}" required>
-                                                <textarea class="form-control m-2" placeholder="Enter your Product details" required name="admin-category" id="admin-category${product.id}">${product.category}</textarea>
+                                                <textarea class="form-control m-2" placeholder="Enter Product details" required name="admin-description" id="admin-description${product.id}">${product.description}</textarea>
+                                                <input class="form-control m-2" type="text" placeholder="Enter Product Category" value="${product.category}" name="admin-category" id="admin-category${product.id}" required>
                                                 <input class="form-control m-2" type="number" placeholder="Enter the Product Amount" value="${product.amount}" name="admin-amount" id="admin-amount${product.id}" required>
                                             </div>
                                         </form>
@@ -61,14 +63,14 @@ function adminContent(args) {
 // Call the function to display the initial products
 adminContent(products);
 
-// function to help update the product
+// Function to update the product
 function updateProduct(index) {
     try {
         const updatedProduct = {
             id: products[index].id,
             productName: document.querySelector(`#admin-name${products[index].id}`).value,
             img_url: document.querySelector(`#admin-image${products[index].id}`).value,
-            descrition: document.querySelector(`#admin-description${products[index].id}`).value,
+            description: document.querySelector(`#admin-description${products[index].id}`).value,
             category: document.querySelector(`#admin-category${products[index].id}`).value,
             amount: parseInt(document.querySelector(`#admin-amount${products[index].id}`).value, 10)
         };
@@ -80,7 +82,7 @@ function updateProduct(index) {
     }
 }
 
-// function that deletes the product
+// Function to delete the product
 function deleteProduct(index) {
     try {
         products.splice(index, 1);
@@ -91,9 +93,9 @@ function deleteProduct(index) {
     }
 }
 
-// function that sorts the products
+// Function to sort the products
 let highest = false;
-sortedProducts.addEventListener('click', () => {
+document.getElementById('adminSortProduct').addEventListener('click', () => {
     try {
         if (!highest) {
             products.sort((a, b) => b.id - a.id);
@@ -108,21 +110,29 @@ sortedProducts.addEventListener('click', () => {
     }
 });
 
-// function that adds new product
+// Function to add new product
 let adminSavedProduct = document.getElementById('saveProduct');
 adminSavedProduct.addEventListener('click', () => {
     try {
         const newProduct = {
             id: products.length ? products[products.length - 1].id + 1 : 1, // auto increment ID
             productName: document.querySelector('#addName').value,
-            category: document.querySelector('#addDetail').value,
+            description: document.querySelector('#addDetail').value,
+            category: document.querySelector('#addCategory').value,
             amount: parseInt(document.querySelector('#addAmount').value, 10),
             img_url: document.querySelector('#addImage').value
         };
         products.push(newProduct);
         localStorage.setItem('products', JSON.stringify(products));
         adminContent(products);
+        document.querySelector('#addName').value = '';
+        document.querySelector('#addDetail').value = '';
+        document.querySelector('#addCategory').value = '';
+        document.querySelector('#addAmount').value = '';
+        document.querySelector('#addImage').value = '';
     } catch (e) {
         alert('Unable to Add new product');
     }
 });
+
+

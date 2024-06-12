@@ -49,6 +49,7 @@ img {
     background-color: blueviolet;
     color: white;
     justify-content: center;
+    background: linear-gradient(60deg, #3a055b, #000600);
 }
 
 .card {
@@ -211,9 +212,14 @@ img {
     transition: border 1s; /* Apply transition only to the border */
     zoom: 4;
 }
-.table{
-    background: transparent;
+.row{
+    /* background: transparent; */
+    color: white;
 }
+.btn{
+    background: linear-gradient(60deg, #3a055b, #000600);
+}
+
 
 /* Footer */
 footer {
@@ -224,3 +230,26 @@ footer {
     color: black !important;
     width: 100%;
 }
+
+footer h3 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .col-md-4 {
+    padding: 10px;
+}
+
+footer .lead {
+    margin-top: 20px;
+}
+
