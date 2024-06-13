@@ -123,8 +123,9 @@ function displayProducts(products) {
                 <img src="${product.img_url}" class="card-img-top" alt="${product.id}" loading='lazy'>
                 <div class="card-body">
                     <h5 class="card-title">${product.productName}</h5>
-                    <p class="card-text">${product.description}</p>
-                    <p class="card-text">${product.amount}</p>
+                    <p class="card-text">Category: ${product.category}</p>
+                    <p class="card-text">Description${product.description}</p>
+                    <p class="card-text">Price${product.amount}</p>
                     <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
                 </div>
             </div>

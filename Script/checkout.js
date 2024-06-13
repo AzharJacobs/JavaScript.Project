@@ -1,8 +1,10 @@
 // Setting the footer year
-document.querySelector('#current-year').textContent = new Date().getFullYear();
+document.querySelector('[currentYear]').textContent =
+    new Date().getUTCFullYear();
 
 // Getting cart items from localStorage
 let cart = JSON.parse(localStorage.getItem('checkout')) || [];
+console.log('cart:', cart);
 let checkoutTable = document.querySelector('[table-checkout]');
 
 // Displaying cart items
@@ -19,6 +21,8 @@ function cartItems() {
         groupedItems[item.id].push(item);
         return groupedItems;
     }, {});
+
+    console.log('cartProducts:', cartProducts);
 
     let tableContent = "";
     for (let id in cartProducts) {
@@ -45,6 +49,7 @@ function clearProducts() {
     localStorage.removeItem('checkout');
     alert('Press "OK" to remove items from your cart');
     location.reload();
+    cartItems(); // Add this line to update the cart display
 }
 
 // Processing payment
@@ -52,6 +57,7 @@ function productPayment() {
     localStorage.removeItem('checkout');
     alert('Payment Successful');
     location.reload();
+    cartItems(); // Add this line to update the cart display
 }
 
 window.onload = () => {
