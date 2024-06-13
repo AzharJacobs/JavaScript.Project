@@ -172,6 +172,7 @@ function addToCart(product) {
     try {
         cart.push(product);
         localStorage.setItem('checkout', JSON.stringify(cart));
+        document.querySelector('[counter]').textContent = cart.length || 0;
     } catch (e) {
         alert('The Checkout is under maintenance');
     }

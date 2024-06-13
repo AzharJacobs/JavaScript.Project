@@ -19,7 +19,7 @@ function adminContent(args) {
                 <td>
                     <div class="d-flex justify-content-around">
                         <button class="btn btn-secondary me-2" data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}">Update</button>
-                        <button class="btn btn-secondary ms-2 <i class="bi bi-x"></i>" onclick="deleteProduct(${i})">Delete</button>
+                        <button class="btn btn-secondary ms-2" onclick="deleteProduct(${i})">Delete</button>
                         <div class="modal fade" id="updateProduct${product.id}" tabindex="-1" aria-labelledby="updateProduct${product.id}" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
