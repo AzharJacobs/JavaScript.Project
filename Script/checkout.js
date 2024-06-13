@@ -53,3 +53,7 @@ function productPayment() {
     alert('Payment Successful');
     location.reload();
 }
+
+window.onload = () => {
+    document.querySelector('[counter]').textContent = cart.length || 0;
+};

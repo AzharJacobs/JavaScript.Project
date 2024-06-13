@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url(/images/background1.jpg);
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -84,7 +88,7 @@ img {
     min-height: 89.8vh;
     display: grid;
     place-items: center;
-    background-image: url(/images/background1.jpg);
+    /* background-image: url(/images/background1.jpg); */
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(#0003, #000);
@@ -97,7 +101,7 @@ img {
     color: #e5a1fc;
     font-size: 3em;
     border: 2px solid #000600;
-    background: linear-gradient(60deg, #3a055b, #000600);
+    /* background: linear-gradient(60deg, #3a055b, #000600); */
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -107,7 +111,7 @@ img {
     min-height: 89.8vh;
     display: grid;
     place-items: center;
-    background-image: url(/images/background1.jpg);
+    /* background-image: url(/images/background1.jpg); */
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(#0003, #000);
@@ -119,12 +123,12 @@ img {
     color: #e5a1fc;
     font-size: 3em;
     border: 2px solid #000600;
-    background: linear-gradient(60deg, #3a055b, #000600);
+    /* background: linear-gradient(60deg, #3a055b, #000600); */
     padding: 10px;
     margin-bottom: 10px;
   }
   .aboutContainer {
-    background: linear-gradient(60deg, #150022, #000600);
+    /* background: linear-gradient(60deg, #150022, #000600); */
     color: #e5a1fc;
     opacity: 0.9;
     display: flex;
@@ -141,7 +145,7 @@ img {
       color: #e5a1fc;
       font-size: 1em;
       border: 2px solid #000600;
-      background: linear-gradient(60deg, #150022, #000600);
+      /* background: linear-gradient(60deg, #150022, #000600); */
       padding: 5px;
     }
   }
@@ -150,7 +154,7 @@ img {
     min-height: 89.8vh;
     display: grid;
     place-items: center;
-    background-image: url(/images/background1.jpg);
+    /* background-image: url(/images/background1.jpg); */
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(#0003, #000);
@@ -162,7 +166,7 @@ img {
     color: #e5a1fc;
     font-size: 3em;
     border: 2px solid #000600;
-    background: linear-gradient(60deg, #3a055b, #000600);
+    /* background: linear-gradient(60deg, #3a055b, #000600); */
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -172,7 +176,7 @@ img {
     min-height: 89.8vh;
     display: grid;
     place-items: center;
-    background-image: url(/images/background1.jpg);
+    /* background-image: url(/images/background1.jpg); */
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(#0003, #000);
@@ -184,7 +188,7 @@ img {
     color: #e5a1fc;
     font-size: 3em;
     border: 2px solid #000600;
-    background: linear-gradient(60deg, #3a055b, #000600);
+    /* background: linear-gradient(60deg, #3a055b, #000600); */
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -198,7 +202,7 @@ img {
     min-height: 89.8vh;
     display: grid;
     place-items: center;
-    background-image: url(/images/background1.jpg);
+    /* background-image: url(/images/background1.jpg); */
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(#0003, #000);
@@ -220,6 +224,88 @@ img {
     background: linear-gradient(60deg, #3a055b, #000600);
 }
 
+  /* Center the admin page content */
+  #table-products {
+    margin: 0 auto;
+    width: 80%; /* adjust the width as needed */
+  }
+
+  /* Center the images */
+  .img-thumbnail {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Contact Us */
+.container-fluid9 {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(60deg, #2f044a, #000600);
+    color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: purple;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.col-md-6 {
+    padding: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+a:hover {
+    color: #23527c;
+}
 
 /* Footer */
 footer {
