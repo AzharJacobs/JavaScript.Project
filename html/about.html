@@ -55,40 +55,89 @@
     <main class="aboutMain">
         <div class="aboutHeader">About Us</div>
         <div class="container aboutContainer">
-          <p>
-            Welcome to our online manga emporium,
-            Where every page tells a tale, a euphorium.
-            With ink and imagination, we bring stories alive,
-            In vibrant hues, where dreams and realities collide.
-            
-            From shonen to shojo, we've got it all,
-            Adventure, romance, and battles that enthral.
-            Step into our world, where heroes rise and fall,
-            And embark on journeys, both big and small.
-            
-            At our store, manga isn't just a book,
-            It's a gateway to worlds where imaginations look.
-            So dive into the panels, let your spirit soar,
-            For in our collection, there's always more in store.
-            
-            With every turn of the page, a new saga begins,
-            Captivating hearts, igniting passions within.
-            So join us in this realm where fantasies unfurl,
-            At our online manga haven, where stories rule the world.
-            
-            Embrace the art, the stories, and the lore,
-            At Manga emporium, where manga dreams galore!
-            
-            Where Every Page Unfolds a New Adventure!
-          </p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <h5 class="card-header">Our Story</h5>
+                        <div class="card-body">
+                            <p>
+                                We started as a small group of manga enthusiasts who wanted to share their passion with the world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <h5 class="card-header">Our Mission</h5>
+                        <div class="card-body">
+                            <p>
+                                Our mission is to provide a platform where manga lovers can discover new stories, connect with each other, and explore the world of manga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <h5 class="card-header">Our Goal</h5>
+                        <div class="card-body">
+                            <p>
+                                Our goal is to become the go-to destination for manga enthusiasts, where they can find inspiration, community, and a sense of belonging.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </main>
-      <footer class="container-fluid">
+        <div class="row">
+            <div class="aboutHeader">Meet The TEAM</div>
+            <div class="column">
+              <div class="card">
+                <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                <div class="container">
+                  <h2>Azhar Jacobs</h2>
+                  <p class="title">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>Azharj2003@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                  <h2>Zakariya Salie</h2>
+                  <p class="title">Art Director</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>ZakiSalie@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+                <div class="container">
+                  <h2>
+                    Mohammad Mohamed</h2>
+                  <p class="title">Designer</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>MoSquared@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    </main>
+      <footer class="container-fluid8">
         <div class="row">
             <div class="col-md-4 text-center">
                 <h3>Contact</h3>
-                <p>Email: asheekasamuels@icloud.com</p>
-                <p>Phone: 067 623 5929</p>
+                <p>Email: Azharj2003@gmail.com</p>
+                <p>Phone: 066 317 5741</p>
             </div>
             <div class="col-md-4 text-center">
                 <h3>Address</h3>
@@ -101,17 +150,23 @@
               <ul class="list-inline">
                   <li class="list-inline-item">
                       <a href="#" target="_blank">
-                          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/66ea2ff0f2515af5a51b7f233b1f409d364b5f0df83ffedf8c136b50bc3d9bb9?apiKey=0bccd99636064f128fb65b1d52624404&"
+                        alt="" class="contact-info-social-icon" />
                       </a>
                   </li>
                   <li class="list-inline-item">
                       <a href="#" target="_blank">
-                          <i class="fab fa-twitter" aria-hidden="true"></i>
+                        <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bd43cfbebb909b8217c66a8c2ccd9270d0e362aeab1e6a2ef8ae68f1ba8ce3b?apiKey=0bccd99636064f128fb65b1d52624404&"
+                        alt="" class="contact-info-social-icon" />
                       </a>
                   </li>
                   <li class="list-inline-item">
                       <a href="#" target="_blank">
-                          <i class="fab fa-instagram" aria-hidden="true"></i>
+                        <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/bb81d9e3889282d2a223a859cf8071d4c31be8305c4258e539dca8a5efabc91c?apiKey=0bccd99636064f128fb65b1d52624404&"
+                        alt="" class="contact-info-social-icon" />
                       </a>
                   </li>
                   <li class="list-inline-item">
@@ -142,6 +197,7 @@
             ? JSON.parse(localStorage.getItem('checkout')).length
             : 0
     }
+ate({ scrollLeft: slides.width() * currentSlide }, 500);
     </script>
 </body>
 
