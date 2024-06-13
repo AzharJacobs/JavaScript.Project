@@ -107,6 +107,7 @@ function recentProducts() {
             <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
             <div class="card-body">
                 <h5 class="card-title">${product.productName}</h5>
+                <p class="card-text">${product.category}</p>
                 <p class="card-text">${product.description}</p>
             </div>
         </div>

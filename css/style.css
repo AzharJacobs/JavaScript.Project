@@ -211,9 +211,11 @@ img {
     background: transparent;
     border: 2px solid #3a055b;
     color: white;
+    transition: box-shadow 0.3s;
 }
 .card-img-top:hover {
     transition: border 1s; /* Apply transition only to the border */
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.9);
     zoom: 4;
 }
 .row{
@@ -308,12 +310,12 @@ a:hover {
 }
 
 /* Footer */
-footer {
-    background-color: #FFE4CF;
+.container-fluid8 {
+    background: linear-gradient(60deg, #2f044a, #000600);
     padding: 20px 0;
     text-align: center;
     justify-content: center;
-    color: black !important;
+    color: black;
     width: 100%;
 }
 
