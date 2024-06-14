@@ -92,7 +92,7 @@ let products =
                         category: "Manga",
                         description: "Delve into the charming and unexpected story of love and friendship between two high school students with seemingly opposite personalities.",
                         amount: 100.00,
-                        img_url: "https://azharjacobs.github.io/Images/Images/Tora.jpg"
+                        img_url: "https://azharjacobs.github.io/Images/Images/Tora.jpeg"
                       },
                       {
                         id: 12,
