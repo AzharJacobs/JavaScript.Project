@@ -251,6 +251,27 @@ img {
 .container-fluid{
     background-color: transparent;
 }
+        /* Purple table styles */
+        .table {
+            background: linear-gradient(60deg, #3a055b, #000600); /* Purple background */
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            border: 2px solid #360964; /* Purple border */
+            padding: 10px;
+            text-align: center;
+        }
+        .table th {
+            background: linear-gradient(60deg, #3a055b, #000600); /* Darker purple header */
+            color: #ffffff; /* White text */
+        }
+        .table td {
+            background: linear-gradient(60deg, #3a055b, #000600); /* Purple background */
+            color: #ffffff; /* White text */
+        }
+        .table-group-divider {
+            background: linear-gradient(60deg, #3a055b, #000600); /* Purple border */
+        }
 
 /* Admin */
 
